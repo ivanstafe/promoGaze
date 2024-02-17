@@ -1,0 +1,320 @@
+@font-face {
+    font-family: 'Light.otf';
+    src: url('../fonts/Night\ Light.otf');
+}
+
+body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+/* Aplica un degradado de dos colores al texto "Distribuidora del Sur" */
+.gradient-text {
+    background: linear-gradient(90deg, rgb(129, 255, 124) 65%, rgb(81, 121, 255) 35%);
+    background-clip: text;
+    color: transparent;
+}
+
+
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.producto {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.producto:hover {
+    transform: scale(1.1);
+}
+
+
+.nav-item,
+.contact-info i,
+.contact-info p,
+.whatsapp,
+.whatsapp img,
+.whatsapp span {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav-item:hover,
+.contact-info:hover i,
+.contact-info:hover p,
+.whatsapp:hover,
+.whatsapp:hover img,
+.whatsapp:hover span {
+    transform: scale(1.1);
+
+}
+
+a {
+    cursor: pointer;
+    /* o cualquier otro valor como not-allowed, etc. */
+}
+
+
+
+
+/* navbar */
+
+@font-face {
+    font-family: 'Sho-CardCapsNF.ttf';
+    src: url('../fonts/Sho-CardCapsNF.ttf');
+}
+
+@font-face {
+    font-family: 'Puppy.otf';
+    src: url('../fonts/Frisky\ Puppy.otf');
+}
+
+@font-face {
+    font-family: 'EIGHT___.TTF';
+    src: url('../fonts/EIGHT___.TTF');
+}
+
+
+
+
+nav {
+    background-color: #010507;
+
+    padding: 60px;
+    /* Ajusta el padding según sea necesario */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 2px solid #000000;  */
+}
+
+.logo {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.logo a {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente la imagen y el texto */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+}
+
+.logo a img {
+    max-height: 70px;
+    width: auto;
+}
+
+.logo a span {
+    margin-right: 12px;
+    font-family: 'EIGHT___.TTF';
+    font-size: 50px;
+
+
+}
+
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-family: monospace;
+
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.left-items {
+    justify-content: flex-start;
+}
+
+.right-items {
+    justify-content: flex-end;
+}
+
+
+
+/* responsive  */
+
+
+@media only screen and (max-width: 768px) {
+
+    .producto img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    .logo a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo a img {
+        max-height: 50px;
+        width: auto;
+    }
+
+    .logo a span {
+        margin-right: 5px;
+        font-family: 'EIGHT___.TTF';
+        font-size: calc(2vw + 10px);
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        font-size: 2vw;
+    }
+
+    body {
+        font-size: 4vw;
+    }
+
+    .contact-bar {
+        background-color: #007bff;
+        color: white;
+        padding: 1px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2vw;
+
+    }
+
+    .contact-info {
+        display: flex;
+        align-items: center;
+        font-size: 2vw;
+
+    }
+
+    .contact-info i {
+        margin-right: 5px;
+    }
+
+
+
+    .whatsapp {
+        display: flex;
+        align-items: center;
+        font-size: 2vw;
+
+    }
+
+    .whatsapp i {
+        margin-right: 10px;
+    }
+
+
+
+    .whatsapp img {
+        max-width: 10px;
+        max-height: 10px;
+        height: auto;
+        width: 100%;
+    }
+
+
+
+}
+
+
+/*contact bar*/
+.contact-bar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+   
+
+}
+
+
+.contact-info,
+.whatsapp {
+    display: flex;
+    align-items: center;
+}
+
+.whatsapp i {
+    margin-right: 10px;
+}
+
+/* Añade esta regla para evitar espacios adicionales entre el icono y el texto */
+.whatsapp p {
+    margin: 0;
+    
+}
+
+
+
+/* modal */
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 14px;
+    padding: 5px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 3px;
+}
+
+.close:hover {
+    background-color: #ddd;
+}
+
+
